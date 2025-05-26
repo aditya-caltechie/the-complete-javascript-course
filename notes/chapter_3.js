@@ -1,18 +1,15 @@
 // data manipulation
 
 const { addStrings, example_array } = require("./chapter_2")
-
+console.log('Example array from chapter 2:', example_array)
 
 let example_sentence = 'this_is_a_string'
-
 let string_length = example_sentence.length
 
 //regex
 
 
-
 //array and lists
-
 let simple_array = [1, 4, 2, 3, 5] // 1 dimensional
 
 //crud - create read update delete
@@ -29,12 +26,15 @@ let end_array = simple_array.slice(index_of_three + 1)
 
 let new_filtered_array = start_array.concat(end_array)
 
-// console.log(new_filtered_array)
+console.log('Original array:', simple_array)
+console.log('Index of 3:', index_of_three)
+console.log('Start array:', start_array)
+console.log('End array:', end_array)
+console.log('New filtered array:', new_filtered_array)
 
 
 
 // dictionaries or objects
-
 const bio = {
     name: 'james',
     age: 27,
@@ -46,12 +46,15 @@ const bio = {
     }
 }
 
+console.log(bio.name)
+console.log('name' in bio)
 console.log('joke' in bio)
 
 function helloWorld() {
-    let sentence = 'hello world'
+    let sentence = 'hello world and India'
     console.log(sentence)
 }
+helloWorld()
 
 
 function counter() {
@@ -64,11 +67,8 @@ function counter() {
 }
 
 let increment = counter()
-
 increment()
 increment()
-
-// console.log(example_array)
 
 // error handling and debugging
 const broken_object = {
@@ -87,18 +87,20 @@ function problematicCodeBlock() {
 
 }
 
-// problematicCodeBlock()
+console.log('Before the problematic code block')
+problematicCodeBlock()
 
 
 
 function throwError() {
     try {
-        
+        console.log('Attempting to throw an error')
         throw new Error('custom error message')
     } catch (err) {
         console.log(err.message)
     }
 }
 
+console.log('Before throwing an error')
 throwError()
 console.log('code continued to execute')
