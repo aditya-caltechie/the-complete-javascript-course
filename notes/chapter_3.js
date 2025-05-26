@@ -1,13 +1,15 @@
-// data manipulation
-
+// Chapter 3: JavaScript Basics
+// This file covers basic JavaScript concepts including data types, functions, and error handling.
+// Importing the fs module for file system operations
+// Importing functions and variables from chapter_2.js
 const { addStrings, example_array } = require("./chapter_2")
 console.log('Example array from chapter 2:', example_array)
+console.log(addStrings('hello', 'world'))
 
 let example_sentence = 'this_is_a_string'
 let string_length = example_sentence.length
 
-//regex
-
+// data manipulation :
 
 //array and lists
 let simple_array = [1, 4, 2, 3, 5] // 1 dimensional
@@ -33,7 +35,6 @@ console.log('End array:', end_array)
 console.log('New filtered array:', new_filtered_array)
 
 
-
 // dictionaries or objects
 const bio = {
     name: 'james',
@@ -46,6 +47,7 @@ const bio = {
     }
 }
 
+console.log(bio)
 console.log(bio.name)
 console.log('name' in bio)
 console.log('joke' in bio)
@@ -65,16 +67,15 @@ function counter() {
         console.log(count)
     }
 }
-
 let increment = counter()
 increment()
 increment()
+
 
 // error handling and debugging
 const broken_object = {
     word: 'nice'
 }
-
 function problematicCodeBlock() {
     try {
         console.log('Attempted the try block')
@@ -86,10 +87,8 @@ function problematicCodeBlock() {
 
 
 }
-
 console.log('Before the problematic code block')
 problematicCodeBlock()
-
 
 
 function throwError() {
